@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lil bàn on film</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        header {
+            text-align: center;
+            padding: 2rem 1rem;
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        nav {
+            text-align: center;
+            margin: 2rem 0;
+        }
+        nav a {
+            margin: 0 1rem;
+            text-decoration: none;
+            color: #333;
+            font-size: 1.2rem;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        section {
+            padding: 2rem 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        section h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+        .collection {
+            flex: 1 1 calc(33.333% - 1rem);
+        }
+        footer {
+            text-align: center;
+            padding: 2rem 1rem;
+            background-color: #fff;
+            border-top: 1px solid #ddd;
+        }
+        @media (max-width: 768px) {
+            .collection {
+                flex: 1 1 calc(50% - 1rem);
+            }
+        }
+        @media (max-width: 480px) {
+            .collection {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>lil bàn on film</h1>
+    </header>
+    <nav>
+        <a href="#collections">Collections</a>
+        <a href="#published">Published Work</a>
+    </nav>
+    <section id="collections">
+        <h2>Photography Collections</h2>
+        <div class="gallery">
+            <!-- Repeat this block for each collection -->
+            <div class="collection">
+                <img src="000015 (9).JPG" alt="Collection 1">
+                <p>Collection Title 1</p>
+            </div>
+            <div class="collection">
+                <img src="collection2.jpg" alt="Collection 2">
+                <p>Collection Title 2</p>
+            </div>
+            <div class="collection">
+                <img src="collection3.jpg" alt="Collection 3">
+                <p>Collection Title 3</p>
+            </div>
+            <!-- Add more collections as needed -->
+        </div>
+    </section>
+    <section id="published">
+        <h2>Published Work</h2>
+        <div class="gallery">
+            <!-- Repeat this block for each published work -->
+            <div class="collection">
+                <img src="published1.jpg" alt="Published Work 1">
+                <p>Published Title 1</p>
+            </div>
+            <div class="collection">
+                <img src="published2.jpg" alt="Published Work 2">
+                <p>Published Title 2</p>
+            </div>
+            <div class="collection">
+                <img src="published3.jpg" alt="Published Work 3">
+                <p>Published Title 3</p>
+            </div>
+            <!-- Add more published works as needed -->
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 lil bàn on film. All rights reserved.</p>
+    </footer>
+</body>
+</html>
