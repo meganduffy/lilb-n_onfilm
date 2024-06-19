@@ -5,12 +5,20 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>lil bán on film</title>
       <style>
+         @font-face {
+         font-family: 'HomeVideoFont';
+         src: URL('./assets/home-video-font/HomeVideo-BLG6G.ttf') format('truetype');
+         }
+         @font-face {
+         font-family: 'HomeVideoBoldFont';
+         src: URL('./assets/home-video-font/HomeVideoBold-R90Dv.ttf') format('truetype');
+         }
          body, html {
+         font-family: 'HomeVideoFont', Arial, sans-serif;
          margin: 0;
          padding: 0;
          height: 100%;
          overflow: hidden;
-         font-family: 'Helvetica Neue', Arial, sans-serif;
          }
          .carousel {
          position: relative;
@@ -82,14 +90,17 @@
          .dropdown-content {
          display: none;
          position: absolute;
-         z-index: 1;
-         }
-
-         .dropdown-content a {
-         float: none;
+         bottom: 0;
+         width: 100%;
+         background-color: rgba(0, 0, 0, 0.01);
          color: white;
-         padding: 10px 0;
+         padding: 1rem;
+         text-align: center;
+         }
+         .credit-text a {
+         color: white;
          text-decoration: none;
+         font-family: 'HomeVideoBoldFont', Arial, sans-serif;
          display: block;
          text-align: left;
          }
@@ -102,6 +113,7 @@
          .dropdown:hover .dropdown-content {
          display: block;
          }
+
       </style>
    </head>
    <body>
@@ -135,10 +147,11 @@
          <img src="https://github.com/meganduffy/lilb-n_onfilm/blob/main/images/image3.JPG?raw=true" alt="Image 2">
          <img src="https://github.com/meganduffy/lilb-n_onfilm/blob/main/images/image5.JPG?raw=true" alt="Image 3">
          <img src="https://github.com/meganduffy/lilb-n_onfilm/blob/main/images/image7.JPG?raw=true" alt="Image 4">
-         <img src="https://github.com/meganduffy/lilb-n_onfilm/blob/main/images/image2.JPG?raw=true" alt="Image 5">
          <img src="https://github.com/meganduffy/lilb-n_onfilm/blob/main/images/image8.JPG?raw=true" alt="Image 6">
-         <img src="https://github.com/meganduffy/lilb-n_onfilm/blob/main/images/image4.JPG?raw=true" alt="Image 7">
          <img src="https://github.com/meganduffy/lilb-n_onfilm/blob/main/images/image6.JPG?raw=true" alt="Image 8">
+         <div class="credit-text">
+            <p>Photography and web design by <a href="https://www.instagram.com/lilban_x/">lil bán</a></p>
+         </div>
       </div>
       <script>
          let currentIndex = 0;
@@ -153,12 +166,12 @@
          function nextSlide() {
             currentIndex = (currentIndex + 1) % images.length;
             showSlide(currentIndex);
-        }
-
-        function prevSlide() {
+         }
+         
+         function prevSlide() {
             currentIndex = (currentIndex - 1 + images.length) % images.length;
             showSlide(currentIndex);
-        }
+         }
          setInterval(nextSlide, 5000); // Change image every 5 seconds
       </script>
    </body>
