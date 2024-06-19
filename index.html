@@ -74,6 +74,11 @@
          margin: 0 1rem;
          font-size: 1.1rem;
          position: relative;
+         padding:5px;
+         }
+         .nav-menu a:hover, .dropbtn:hover {
+            color:black;
+            background: white;
          }
          .dropdown {
          float: left;
@@ -90,6 +95,30 @@
          .dropdown-content {
          display: none;
          position: absolute;
+         z-index: 1;
+         }
+
+         .dropdown-content a {
+         float: none;
+         color: white;
+         padding: 10px 0;
+         text-decoration: none;
+         display: block;
+         text-align: left;
+         color:black;
+         background: white;
+         }
+
+         .dropdown-content a:hover {
+         background:black;
+         color: white;
+         }
+
+         .dropdown:hover .dropdown-content {
+         display: block;
+         }
+         .credit-text {
+         position: absolute;
          bottom: 0;
          width: 100%;
          background-color: rgba(0, 0, 0, 0.01);
@@ -101,17 +130,6 @@
          color: white;
          text-decoration: none;
          font-family: 'HomeVideoBoldFont', Arial, sans-serif;
-         display: block;
-         text-align: left;
-         }
-
-         .dropdown-content a:hover {
-         color:black;
-         background: white;
-         }
-
-         .dropdown:hover .dropdown-content {
-         display: block;
          }
 
       </style>
@@ -120,19 +138,18 @@
       <div class="nav-menu">
          <h1>lil bán on film</h1>
          <div style="margin-right: 1rem">
-            <a href="portfolio.html">About</a>
             <div class="dropdown" style="margin-right: 1rem">
                <a class="dropbtn">Portfolio</a>
                <div class="dropdown-content">
-                  <a href="#">Link 1</a>
-                  <a href="#">Link 2</a>
-                  <a href="#">Link 3</a>
+                  <a href="#">Natális Puella</a>
+                  <a href="#">Krung Thep</a>
+                  <a href="#">Violet</a>
                </div>
             </div>
          <div class="dropdown">
             <a class="dropbtn">Published Work</a>
             <div class="dropdown-content">
-               <a href="#">GavinDaVinci Incomplete</a>
+               <a href="#">GavinDaVinci: Incomplete</a>
                <a href="#">Expired I</a>
             </div>
          </div>
